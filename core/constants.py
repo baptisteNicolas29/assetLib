@@ -1,0 +1,75 @@
+from pathlib import Path
+
+from maya import cmds
+
+
+DEFAULT_ASSEMBLY = ['persp', 'front', 'side', 'top']
+USER_ASSETLIB_PATH = str(Path(cmds.internalVar(userPrefDir=True)) / "assetLib" / "lib")
+
+VIEWPORT_OPTIONS = {
+        'planes': True,
+        'dimensions': True,
+        'cv': True,
+        'nurbsSurfaces': True,
+        'hulls': True,
+        'subdivSurfaces': True,
+
+        'dynamics': False,
+        'dynamicConstraints': False,
+        'fluids': False,
+        'follicles': False,
+        'hairSystems': False,
+        'nCloths': False,
+        'nParticles': False,
+        'nRigids': False,
+        'particleInstancers': False,
+        'clipGhosts': False,
+        'controllers': False,
+        'deformers': False,
+        'handles': False,
+        'ikHandles': False,
+        'joints': False,
+        'locators': False,
+        'motionTrails': False,
+        'pivots': False,
+        'lights': False,
+        'strokes': False,
+        'textures': False,
+        'hud': False,
+        'hos': False,
+        'grid': False,
+        'manipulators': False,
+        'sel': False,
+        'bluePencil': False,
+        }
+
+USD_EXPORT_OPTIONS = {
+    'animation': '0',
+    'convertMaterialsTo': '[UsdPreviewSurface]',
+    'defaultMeshScheme': 'catmullClark',
+    'defaultPrim': 'grp',
+    'defaultUSDFormat': 'usda',
+    'endTime': '1',
+    'eulerFilter': '0',
+    'excludeExportTypes': '[]',
+    'exportBlendShapes': '0',
+    'exportColorSets': '1',
+    'exportComponentTags': '1',
+    'exportDisplayColor': '0',
+    'exportInstances': '1',
+    'exportRelativeTextures': 'automatic',
+    'exportSkels': 'none',
+    'exportSkin': 'none',
+    'exportUVs': '1',
+    'exportVisibility': '1',
+    'frameSample': '0.0',
+    'frameStride': '1',
+    'mergeTransformAndShape': '1',
+    'rootPrim': 'grp',
+    'rootPrimType': 'xform',
+    'shadingMode': 'useRegistry',
+    'startTime': '1',
+    'staticSingleSample': '0',
+    'stripNamespaces': '0',
+    'worldspace': '0',
+ }
